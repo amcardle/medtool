@@ -13,15 +13,18 @@
         <router-view />
       </div>
 
-      <div className="border-t-2 text-sm">
-        <!-- Footer -->
-
-        <p>
-          {{ process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF }}#{{
-            process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA
-          }}
-        </p>
-      </div>
+      <div className="border-t-2 text-sm"><!-- Footer -->{{ REF }}#{{ SHA }}</div>
     </div>
   </main>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'Home',
+  setup() {
+    return { REF: process.env.VUE_APP_GIT_COMMIT_REF, SHA: process.env.VUE_APP_GIT_COMMIT_SHA };
+  }
+});
+</script>
