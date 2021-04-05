@@ -13,7 +13,7 @@
         <router-view />
       </div>
 
-      <div className="border-t-2 text-sm"><!-- Footer -->{{ REF }}#{{ SHA }}</div>
+      <div className="border-t-2 text-sm"><!-- Footer -->{{ REF }} # {{ SHA }}</div>
     </div>
   </main>
 </template>
