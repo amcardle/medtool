@@ -1,0 +1,3 @@
+- [ ] review the pre-deploy on vercel
+- [ ] check the lighthouse score
+- [ ] ensure the PWA is installable
