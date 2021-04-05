@@ -13,7 +13,10 @@
         <router-view />
       </div>
 
-      <div className="border-t-2 text-sm"><!-- Footer -->{{ REF }} # {{ SHA }}</div>
+      <div className="border-t-2 text-sm">
+        <!-- Footer -->{{ REF }}
+        <a v-bind:href="'https://github.com/amcardle/medtool/commit/' + SHA">{{ SHA }}</a>
+      </div>
     </div>
   </main>
 </template>
