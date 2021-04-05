@@ -16,6 +16,7 @@
       <div className="border-t-2 text-sm">
         <!-- Footer -->{{ REF }}
         <a v-bind:href="'https://github.com/amcardle/medtool/commit/' + SHA">{{ SHA }}</a>
+        <button @click="clearSWCache()">Unlink SW</button>
       </div>
     </div>
   </main>
@@ -27,7 +28,20 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'Home',
   setup() {
-    return { REF: process.env.VUE_APP_GIT_COMMIT_REF, SHA: process.env.VUE_APP_GIT_COMMIT_SHA };
+    function clearSWCache() {
+      console.log('clearing cache');
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (const registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+
+    return {
+      clearSWCache,
+      REF: process.env.VUE_APP_GIT_COMMIT_REF,
+      SHA: process.env.VUE_APP_GIT_COMMIT_SHA
+    };
   }
 });
 </script>
