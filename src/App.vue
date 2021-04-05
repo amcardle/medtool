@@ -13,7 +13,15 @@
         <router-view />
       </div>
 
-      <div className="border-t-2 text-sm"><!-- Footer --></div>
+      <div className="border-t-2 text-sm">
+        <!-- Footer -->
+
+        <p>
+          {{ process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF }}#{{
+            process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA
+          }}
+        </p>
+      </div>
     </div>
   </main>
 </template>
