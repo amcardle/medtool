@@ -12,6 +12,7 @@ export default defineComponent({
     return (
       <div class="home">
         Home component {weight.s} {height.s}
+        {assert.sameUnits(weight, height)}
       </div>
     );
   }

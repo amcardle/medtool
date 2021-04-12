@@ -6,13 +6,30 @@
  *
  */
 
-export default function assert(test: boolean): void {
+import U from './units';
+
+function assert(test: boolean): void {
   if (!test) {
-    fail('assert()');
+    throw Error('Assertion Error');
   }
 }
 
-function fail(message: string) {
-  console.log('Assertion Failure: ' + message);
-  throw Error('Assertion Error: ' + message);
-}
+/**
+ * Does a have the same units as b?
+ */
+assert.sameUnits = function (a: U, b: U) {
+  if (a.u != b.u) {
+    throw Error(`Different units: ${a} and ${b}`);
+  }
+};
+
+/**
+ * Does a have the given unit?
+ */
+assert.hasUnits = function (a: U, unit: string) {
+  if (a.u != unit) {
+    throw Error(`Different units: ${a} and ${unit}`);
+  }
+};
+
+export default assert;
