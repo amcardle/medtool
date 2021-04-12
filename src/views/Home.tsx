@@ -1,6 +1,7 @@
 import { defineComponent } from 'vue';
 import * as store from '../store';
 import assert from '../util/assert';
+import Row from '../components/row';
 
 export default defineComponent({
   name: 'Home',
@@ -12,7 +13,9 @@ export default defineComponent({
     return (
       <div class="home">
         Home component {weight.s} {height.s}
-        {assert.sameUnits(weight, height)}
+        <Row name="Example">
+          <>Content</>
+        </Row>
       </div>
     );
   }
