@@ -2,6 +2,7 @@ import { defineComponent } from 'vue';
 import * as store from '../store';
 import assert from '../util/assert';
 import Row from '../components/row';
+import { BMI } from '../util/calculators';
 
 export default defineComponent({
   name: 'Home',
@@ -13,9 +14,7 @@ export default defineComponent({
     return (
       <div class="home">
         Home component {weight.s} {height.s}
-        <Row name="Example">
-          <>Content</>
-        </Row>
+        <Row name="Example">{BMI(weight, height).s}</Row>
       </div>
     );
   }
