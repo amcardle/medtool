@@ -1,4 +1,11 @@
 /**
+ * Round to 3 significant figures
+ */
+function precise(x: number): string {
+  return Number(x).toPrecision(3);
+}
+
+/**
  * Defines a basic Unit
  *
  * @example
@@ -34,8 +41,7 @@ export default class U {
    * ie 12 kg
    */
   get s() {
-    //TODO Implement rounding to significant figures
-    return `${this._value} ${this._unit}`;
+    return `${precise(this._value)} ${this._unit}`;
   }
 
   toString() {
