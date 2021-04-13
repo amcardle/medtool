@@ -14,6 +14,7 @@ export default defineComponent({
     return (
       <div class="home">
         Home component {weight.s} {height.s}
+        <tools.Input></tools.Input>
         <tools.Weights></tools.Weights>
       </div>
     );
