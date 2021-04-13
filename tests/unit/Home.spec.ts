@@ -1,8 +1,8 @@
-import { shallowMount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import Home from '../../src/views/Home';
 
 describe('Home.vue', () => {
   it('Home.vue loads', () => {
-    const wrapper = shallowMount(Home, {});
+    const wrapper = mount(Home, {});
   });
 });
