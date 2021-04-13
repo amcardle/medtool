@@ -15,5 +15,13 @@ module.exports = {
     '!**/router/**',
     '!**/main.ts',
     '!**/App.vue'
-  ]
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100
+    }
+  }
 };
