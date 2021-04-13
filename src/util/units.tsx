@@ -34,6 +34,7 @@ export default class U {
    * ie 12 kg
    */
   get s() {
+    //TODO Implement rounding to significant figures
     return `${this._value} ${this._unit}`;
   }
 
