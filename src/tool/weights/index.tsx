@@ -118,7 +118,7 @@ const Weights = defineComponent({
     return (
       <Row name="Weight">
         <p>BMI: {BMI(this.weight, this.height).s}</p>
-        <p>IBW: {IBW(this.weight, this.height, this.male.value).s}</p>
+        <p>IBW: {IBW(this.height, this.weight, this.male.value).s}</p>
         <p>ABW: {ABW(this.weight, this.height, this.male.value).s}</p>
         <p>LBW: {LBW(this.weight, this.height, this.male.value).s}</p>
       </Row>
