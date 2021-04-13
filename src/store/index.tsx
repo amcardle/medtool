@@ -19,7 +19,7 @@ export const male = computed(() => {
 //TODO Remove this in production
 //Written to regularly change values to ensure all code is properly reactive
 setInterval(() => {
-  _height.value = Math.round(Math.random() * 100);
+  _height.value = Math.round(Math.random() * 100) + 100;
 }, 2000);
 
 setInterval(() => {
