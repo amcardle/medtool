@@ -6,7 +6,7 @@ export const weight = computed(() => {
   return new U(_weight.value, 'kg');
 });
 
-export function setWeight(weight: number) {
+export function setWeight(weight: number): void {
   if (weight > 0) {
     _weight.value = weight;
   }
@@ -17,7 +17,7 @@ export const height = computed(() => {
   return new U(_height.value, 'cm');
 });
 
-export function setHeight(height: number) {
+export function setHeight(height: number): void {
   if (height > 0) {
     _height.value = height;
   }

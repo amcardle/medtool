@@ -4,7 +4,7 @@ import * as store from '../../store';
 
 const Input = defineComponent({
   name: 'Input',
-  setup(props) {
+  setup() {
     function setWeight(e: Event) {
       const target = e.target as HTMLInputElement;
       const weight = Number.parseFloat(target.value);
