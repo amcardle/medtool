@@ -22,8 +22,8 @@ const Input = defineComponent({
   render() {
     return (
       <Row name="Input">
-        <input onInput={this.setWeight} />
-        <input onInput={this.setHeight} />
+        <input class="border-gray-300 border" placeholder="Weight (kg)" onInput={this.setWeight} />
+        <input class="border-gray-300 border" placeholder="Height (cm)" onInput={this.setHeight} />
       </Row>
     );
   }
